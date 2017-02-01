@@ -15053,9 +15053,11 @@ UmjHkqIoiqIoiqIoiqIoipIU/x/ZK6pCOJcI5gAAAABJRU5ErkJggg==
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> Based on the above feature distributions :</p>
 <ol>
-<li>The correlation between Grocery and Detergent_paper seems to be quite obvious .</li>
+<li>The correlation between Grocery and Detergent_paper seems to be quite obvious . </li>
+<li>There is a mild correlation between Milk and Grocery and Milk and Detergent_papers.</li>
 <li>Yes, this confirms my suspicions about the relevance of features based in Ques. 2.</li>
-<li>The data distribution for these two features seems to be lognormal distribution .</li>
+<li>The data distribution for these two features seems to be lognormal distribution and Positively skewed as well . </li>
+<li>There is a significant skewness from zero skewness indicating that we must apply some kind of normalisation to make the features normally distributed .</li>
 </ol>
 
 </div>
@@ -22207,10 +22209,10 @@ RU5ErkJggg==
 The first four principal components capture a total of 93.11% of total variance .</p>
 <p><strong>Ques : Discuss what the first four dimensions best represent in terms of customer spending</strong></p>
 <ol>
-<li><strong><em>Dimension 1</em></strong> : Best represent Milk, Grocery and Detergents_Paper</li>
-<li><strong><em>Dimension 2</em></strong> : Best represent Fresh, Frozen and Delicatessen</li>
-<li><strong><em>Dimension 3</em></strong> : Best represent Frozen and Delicatessen and there is a high decrease in value for Fresh and Detergents_Paper</li>
-<li><strong><em>Dimension 4</em></strong> : Best represent Frozen and Detergents_Paper and there is a high decrease in vlaue for Fish and Delicatessen</li>
+<li><strong><em>Dimension 1</em></strong> : Best represent Milk, Grocery and Detergents_Paper .I guess this is more likely to seperate convinient stores from other customers .</li>
+<li><strong><em>Dimension 2</em></strong> : Best represent Fresh, Frozen and Delicatessen . This is more likely to seperate restaurants from other customers .</li>
+<li><strong><em>Dimension 3</em></strong> : Best represent Frozen and Delicatessen and there is a high decrease in value for Fresh and Detergents_Paper . This might sepearate out supermarkets easily.</li>
+<li><strong><em>Dimension 4</em></strong> : Best represent Frozen and Detergents_Paper and there is a high decrease in vlaue for Fish and Delicatessen . This might seperate out estabilishments where fast food maybe served . </li>
 </ol>
 
 </div>
@@ -22436,7 +22438,7 @@ The first four principal components capture a total of 93.11% of total variance 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f78e0b99150&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f18009e9150&gt;</pre>
 </div>
 
 </div>
@@ -24230,22 +24232,22 @@ fzmKI26Zh89hAAAAAElFTkSuQmCC
     <tr>
       <th>1</th>
       <td>3</td>
-      <td>0.376166</td>
+      <td>0.393673</td>
     </tr>
     <tr>
       <th>2</th>
       <td>4</td>
-      <td>0.332445</td>
+      <td>0.333313</td>
     </tr>
     <tr>
       <th>3</th>
       <td>5</td>
-      <td>0.280983</td>
+      <td>0.295441</td>
     </tr>
     <tr>
       <th>4</th>
       <td>6</td>
-      <td>0.284640</td>
+      <td>0.271499</td>
     </tr>
     <tr>
       <th>5</th>
@@ -24255,7 +24257,7 @@ fzmKI26Zh89hAAAAAElFTkSuQmCC
     <tr>
       <th>6</th>
       <td>8</td>
-      <td>0.311984</td>
+      <td>0.324464</td>
     </tr>
   </tbody>
 </table>
@@ -24329,6 +24331,7 @@ fzmKI26Zh89hAAAAAElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> The best score is achieved when number of clusters = 2</p>
+<p><strong>Note : </strong> <strong><em>If the outliers are not removed we get the best score when number of cluseters = 3 with score 0.375222595239 . In this case, when number of clusters =2 , score is 0.316017.</em></strong></p>
 
 </div>
 </div>
@@ -25487,7 +25490,7 @@ AHpGIAQAAADQMwIhAAAAgJ4RCAEAAAD0jEAIAAAAoGf+L2TPRQMeNS6eAAAAAElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Inverse transform the centers</span>
@@ -25557,11 +25560,11 @@ AHpGIAQAAADQMwIhAAAAgJ4RCAEAAAD0jEAIAAAAoGf+L2TPRQMeNS6eAAAAAElFTkSuQmCC
 
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[20]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[17]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f78e0bbdc50&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f17ebf38e10&gt;</pre>
 </div>
 
 </div>
@@ -26036,7 +26039,7 @@ AAAAAAzV/we2yO1qMEEBQwAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Display the predictions</span>
@@ -26116,7 +26119,15 @@ Sample point 2 predicted to be in Cluster 1
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> I beleive customers who buy Fresh , Milk , Frozen and Grocery would generally like their items to be delivered quickly , since these are perishable goods ( or in case of Frozen , these may be required urgently to be stored properly) . I think the wholesale distributor should select the customers randomly from each segment and change the delievery time from 5 days to 3 days a week (By providing some sort of compensation like discount , etc ).It should be noted here that customers from both segments should be combined since customers in first segment have high consumption of Fresh and Frozen on average while customers in seconf segment have high consumption of Milk and Grocery. So the main target would be identifying these customers  from both segments . Then a customer satisfaction survey should be done and it should be identified whether customers who buy Fresh , Milk , Frozen and Grocery are unsatisfied or not ,since these are most likely to be affected . The control should be equally sized and should be selected randomly from the remaining customers .</p>
+<p><strong>Answer:</strong> I beleive customers who buy Fresh , Milk , Frozen and Grocery would generally like their items to be delivered quickly , since these are perishable goods ( or in case of Frozen , these may be required urgently to be stored properly) . In this scenario there are two A/B tests that should be conducted as follows :</p>
+<ol>
+<li><p><strong><em> A/B test on Segment 0 </em></strong> :<br>
+In this case we select customers randomly from this segment and and change the delievery time from 5 days to 3 days a week (By providing some sort of compensation like discount , etc ). The control group should be equally sized and should be selected randomly from the remaining customers in this segement . In this case , customers buy more of Fresh and Frozen on average are more likely to react negatively with the reduction in delivery time . Once the customer survery is done , it is more likely that customers in this segment who buy Fresh and Frozen goods are most likley to be affected . This process should be iterated for various test customers similar to cross-validation , to ensure that random selection of customers does not impact the results .</p>
+</li>
+<li><p><strong><em> A/B test on Segment 1 </em></strong>:
+In this case we select customers randomly from this segment and and change the delievery time from 5 days to 3 days a week (By providing some sort of compensation like discount , etc ). The control group should be equally sized and should be selected randomly from the remaining customers in this segement . In this case , customers buy more of Milk and Grocery on average are more likely to react negatively with the reduction in delivery time . Once the customer survery is done , it is more likely that customers in this segment who buy Milk and Grocery goods are most likley to be affected . This process should be iterated for various test customers similar to cross-validation , to ensure that random selection of customers does not impact the results .</p>
+</li>
+</ol>
 
 </div>
 </div>
